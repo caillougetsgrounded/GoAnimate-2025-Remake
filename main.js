@@ -1,6 +1,7 @@
 // Core part of Vyond: Remastered
-const RPC = require("discord-rpc");
+//const RPC = require("discord-rpc");
 require("./server");
+const RPC = { Client: function() { return { on: () => {}, setActivity: () => {}, login: () => ({ catch: () => {} }) }; } };
 
 
 // Loads env.json for Wrapper version and build number
